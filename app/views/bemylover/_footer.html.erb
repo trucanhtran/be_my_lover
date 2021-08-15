@@ -1,0 +1,13 @@
+<div id="id_footer">
+  <div class="footer-text">Điền form góp ý dưới đây nè!</div>
+  <div>
+    <%= form_with do |form| %>
+      <div>
+        <%= form.text_field :opinion, placeholder: "Nhập ở đây nè.."%>
+      </div>
+      <div>
+        <%= form.submit 'Gửi'%>
+      </div>
+    <%end%>
+  </div>
+</div>
