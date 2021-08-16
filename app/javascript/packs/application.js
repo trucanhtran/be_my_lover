@@ -12,6 +12,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 require("jquery");
+require("packs/move_btn.js")
 
 function displayAudio(el, audio){
    if(el.matches("#id_choose_no")){
