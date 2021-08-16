@@ -16,6 +16,7 @@
   border-radius: 50%;
   opacity: 0.5;
   animation: rise 10s infinite ease-in;
+  z-index: 2;
 }
 .bubble:nth-child(1) {
   width: 40px;
