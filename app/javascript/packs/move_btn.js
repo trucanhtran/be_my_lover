@@ -5,6 +5,8 @@ $(function(){
                 left:(Math.random()*90)+"%",
                 top:(Math.random()*90)+"%",
             });
+            $(".waiting").attr('style', 'display:block');
+
         }
     });
 
