@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="b-title">Này cậu..</div>
+  <div class="m-title">Lắng nghe nhé..</div>
+  <div  class="m-title">Bất ngờ cho cậu, click nút bên dưới đi!</div>
+  <div  class="m-title" id="id_send_love">Tớ thích cậu nhiều lắm í. Làm ny tớ nhá nhá?</div>
+
+  <div class="btn" id= "id_listen_event">
+    Nhấn vào nút này đây!
+  </div>
+
+  <div class="group-btn " id="id_answer">
+    <button class="btn js-btn">Đồng ý luôn</button>
+    <button class="btn" id="id_choose_no">Không muốn đâu</button>
+  </div>
+</div>
+
+<section class="sticky">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</section>
+
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
+          <i class="ti-close"></i>
+        </div>
+
+        <header class="modal-header">
+          Bạn có điều gì muốn nói với tui hông?
+        </header>
+
+        <div >
+          <%= form_with(class: "modal-body") do |form|%>
+            <%= form.label :content, "Say something..", class: "modal-label" %>
+            <%= form.text_field :content, placeholder: "Viết ở đây", class: "modal-input"%>
+            <%= form.submit "Gửi", id:"buy-tickets" %>
+          <% end %>
+        </div>
+
+        <footer class="modal-footer">
+          <p class="modal-help">Need <a href="">help?</a></p>
+        </footer>
+      </div>
+    </div>
+
+
+
+ <script>
+      const myBtn = document.querySelector(".js-btn");
+      const modal = document.querySelector(".js-modal");
+      const modalClose = document.querySelector(".js-modal-close");
+      const modalContainer = document.querySelector(".js-modal-container");
+
+      //hàm hiển thị modal mua về (thêm class open vào modal)
+      function showBuyTickets() {
+        modal.classList.add("open");
+      }
+
+      //hàm a modal mua về (gỡ bỏ class open vào modal)
+      function hideBuyTickets() {
+        modal.classList.remove("open");
+      }
+
+      // lập qua từng thẻ button và nghe hành vi click
+
+        myBtn.addEventListener("click", showBuyTickets);
+
+
+      // nghe hành vi click vào button close
+      modalClose.addEventListener("click", hideBuyTickets);
+
+      modal.addEventListener("click", hideBuyTickets);
+
+      modalContainer.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    </script>

@@ -6,7 +6,7 @@
   <div  class="m-title">Cậu có muốn lắng nghe không?</div>
   <div class="group-btn">
     <div class="btn" >
-      <%=link_to 'Tất nhiên, tớ sẽ lắng nghe cậu', '#', id: "id_choose_yes"%>
+      <%=link_to 'Tất nhiên, tớ sẽ lắng nghe cậu', send_my_love_path, id: "id_choose_yes"%>
     </div>
     <button class="btn" id="id_choose_no">No, hông muốn nghe đâu</button>
   </div>
@@ -27,6 +27,3 @@
     <div class="bubble text"><span>Say yes<span></div>
     <div class="bubble text waiting"><span>Quạo lắm rồi phải hơm<span></div>
 </div>
-
-
-<%= render 'footer' %>
