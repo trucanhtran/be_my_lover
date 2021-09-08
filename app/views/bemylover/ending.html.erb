@@ -22,6 +22,10 @@
 
 </div>
 
+
+<audio src="/assets/she_share_story.mp3"></audio>
+
+
 </div>
 
 
@@ -37,3 +41,15 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
 </section>
+
+    <script>
+
+    window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+  audio.setAttribute("loop", true)
+});
+
+
+    </script>
