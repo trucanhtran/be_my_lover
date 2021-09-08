@@ -54,7 +54,7 @@
     </div>
 
 
-<audio src="/asstets/bubblegum.mp3"></audio>
+<audio src="/assets/bubble_gum.mp3" autoplay="true"></audio>
 
 
 
@@ -62,13 +62,12 @@
 
 <script>
 
-  window.addEventListener("DOMContentLoaded", event => {
   const audio = document.querySelector("audio");
   audio.volume = 0.2;
   console.log(audio)
   audio.play();
   audio.setAttribute("loop", true)
-});
+
 
 
     </script>
