@@ -26,6 +26,11 @@
   font-weight: bold;
 }
 
+.remove-text {
+  transition: all 35s ease-in-out;
+  display: none;
+}
+
 #id_send_love {
   display: none;
 }

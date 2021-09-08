@@ -1,7 +1,9 @@
+
+
 <div class="container">
   <div class="b-title">Này cậu..</div>
-  <div class="m-title">Lắng nghe nhé..</div>
-  <div  class="m-title">Bất ngờ cho cậu, click nút bên dưới đi!</div>
+  <div class="m-title m-text">Lắng nghe nhé..</div>
+  <div  class="m-title m-text">Bất ngờ cho cậu, click nút bên dưới đi!</div>
   <div  class="m-title" id="id_send_love">Tớ thích cậu nhiều lắm í. Làm ny tớ nhá nhá?</div>
 
   <div class="btn" id= "id_listen_event">
@@ -52,6 +54,23 @@
     </div>
 
 
+<audio src="/assets/bubble_gum.mp3" autoplay="true"></audio>
+
+
+
+
+
+<script>
+
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  console.log(audio)
+  audio.play();
+  audio.setAttribute("loop", true)
+
+
+
+    </script>
 
  <script>
       const myBtn = document.querySelector(".js-btn");
